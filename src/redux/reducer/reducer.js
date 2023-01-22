@@ -7,15 +7,11 @@ let initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case "INCREMENT":
-      return { ...state, count: state.count + action.payload.num };
-    case "DECREMENT":
-      return { ...state, count: state.count - action.payload.num };
-    case "LOGIN":
+    case "SAVE":
       return {
         ...state,
-        id: action.payload.id,
-        password: action.payload.password,
+        name: action.payload.name,
+        phone: action.payload.phone,
       };
     default:
       return { ...state };

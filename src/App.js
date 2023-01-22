@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 
 import PhoneInput from "./component/PhoneInput";
 import PhoneSearch from "./component/PhoneSearch";
@@ -14,6 +15,12 @@ import PhoneBookCard from "./component/PhoneBookCard";
 // 5. 연락처를 검색할 수 있음
 
 function App() {
+  const dispatch = useDispatch();
+
+  const savePhoneBook = () => {
+    dispatch({ type: "SAVE", payload: { name: "ff", phone: "0101111" } });
+  };
+
   return (
     <Container>
       <Row>
