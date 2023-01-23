@@ -1,7 +1,14 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 
+import { useDispatch } from "react-redux";
+
 const Input = () => {
+  const dispatch = useDispatch();
+  const savePhoneBook = (event) => {
+    event.preventDefault();
+    dispatch({ type: "SAVE", payload: { name: "ff", phone: "0101111" } });
+  };
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -13,7 +20,7 @@ const Input = () => {
         <Form.Label>전화번호</Form.Label>
         <Form.Control type="tel" placeholder="전화번호 입력" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={savePhoneBook}>
         저장
       </Button>
     </Form>
