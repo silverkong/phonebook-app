@@ -5,12 +5,13 @@ import { useSelector } from "react-redux";
 
 const PhoneBook = () => {
   const name = useSelector((state) => state.name);
+  const phone = useSelector((state) => state.phone);
   return (
     <div className="box-phonebook">
       <img src={icUser} alt="" />
       <div className="box-phonebook-contents">
         <h4>{name}</h4>
-        <span>전화번호</span>
+        <span>{phone}</span>
       </div>
     </div>
   );
