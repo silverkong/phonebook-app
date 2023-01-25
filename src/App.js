@@ -3,8 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 import PhoneInput from "./component/PhoneInput";
-import PhoneSearch from "./component/PhoneSearch";
-import PhoneBookCard from "./component/PhoneBookCard";
+import PhoneBookList from "./component/PhoneBookList";
 
 // 리덕스를 활용하여 해당 프로젝트 생성
 // 1. 이름과 핸드폰 번호를 적을 입력 풋이 있음
@@ -24,9 +23,7 @@ function App() {
           <PhoneInput />
         </Col>
         <Col>
-          <PhoneSearch />
-          <span>총 0명</span>
-          <PhoneBookCard />
+          <PhoneBookList />
         </Col>
       </Row>
     </Container>
